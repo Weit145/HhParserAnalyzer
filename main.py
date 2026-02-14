@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 # https://spb.hh.ru/search/vacancy?text=Кассир&ored_clusters=true&order_by=publication_time&page=0
 
 class Parser:
-    def __init__(self, select_work, mx:int = 200):
+    def __init__(self, select_work, mx:int = 10):
         self.mx = mx
         
         self.work = self.validate(select_work)
@@ -37,7 +37,11 @@ class Parser:
                         cleaned = text.replace('\xa0', ' ').strip()
                         cleaned = cleaned.replace('\u202f', '')
                         numbers = re.findall(r'\d+', cleaned)
-                        self.salaries.extend(numbers)
+                        if len(numbers)==2:
+                            numbers=(int(numbers[0])+int(numbers[1]))/2
+                            self.salaries.append(int(numbers))
+                            continue
+                        self.salaries.append(int(numbers[0]))
                         break
             page += 1
         print(self.salaries)
@@ -64,7 +68,7 @@ class Parser:
             return None
         
 def main():
-    select_work = "Python"
+    select_work = input()
     parser = Parser(select_work)
     parser.run()
     

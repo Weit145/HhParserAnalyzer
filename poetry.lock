@@ -189,6 +189,31 @@ files = [
 all = ["flake8 (>=7.1.1)", "mypy (>=1.11.2)", "pytest (>=8.3.2)", "ruff (>=0.6.2)"]
 
 [[package]]
+name = "pytelegrambotapi"
+version = "4.30.0"
+description = "Python Telegram bot API."
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "pytelegrambotapi-4.30.0-py3-none-any.whl", hash = "sha256:cef0a61cfb21a320c597984985a7f417e35e67807f40cfc43bcb9ad3ebe944e6"},
+    {file = "pytelegrambotapi-4.30.0.tar.gz", hash = "sha256:0bbfe244e008c9e7fb9a5c1ddffb1d99b28089387f0706d4a8aad496feccda06"},
+]
+
+[package.dependencies]
+requests = "*"
+
+[package.extras]
+coloredlogs = ["coloredlogs"]
+fastapi = ["fastapi"]
+json = ["ujson"]
+pil = ["pillow"]
+psutil = ["psutil"]
+redis = ["redis (>=3.4.1)"]
+uvicorn = ["uvicorn"]
+watchdog = ["watchdog"]
+
+[[package]]
 name = "requests"
 version = "2.32.5"
 description = "Python HTTP for Humans."
@@ -223,6 +248,22 @@ files = [
 ]
 
 [[package]]
+name = "telebot"
+version = "0.0.5"
+description = "A Telegram bot library, with simple route decorators."
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = [
+    {file = "telebot-0.0.5-py3-none-any.whl", hash = "sha256:50327c240243480d40ade4ea5bea4f464bf57d4ff000ea669fcd705396074863"},
+    {file = "telebot-0.0.5.tar.gz", hash = "sha256:848a5885b57247b65edd0e92647b4372ebd8d41611dca3f344788c11deac2571"},
+]
+
+[package.dependencies]
+pyTelegramBotAPI = "*"
+requests = "*"
+
+[[package]]
 name = "typing-extensions"
 version = "4.15.0"
 description = "Backported and Experimental Type Hints for Python 3.9+"
@@ -255,4 +296,4 @@ zstd = ["backports-zstd (>=1.0.0) ; python_version < \"3.14\""]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12"
-content-hash = "32822c705876e30e3362190a5d71600c9684ea5253d9d278590f0c6565bf1d17"
+content-hash = "ddb05cbd4a6d1f98ad37a3b77354cef5402730bad8011be8609863d28f7b6f14"
