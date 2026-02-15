@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 # https://spb.hh.ru/search/vacancy?text=Кассир&ored_clusters=true&order_by=publication_time&page=0
 
 class Parser:
-    def __init__(self, select_work, mx:int = 10):
+    def __init__(self, select_work, mx:int = 200):
         self.mx = mx
         
         self.work = self.validate(select_work)
@@ -24,6 +24,7 @@ class Parser:
             self.url = f"https://spb.hh.ru/search/vacancy?text={self.work}&ored_clusters=true&order_by=publication_time&page={page}"
             
             html = self.fetch()
+            print(self.url)
             if html is None:
                 break
             
@@ -33,6 +34,9 @@ class Parser:
                 spans = card.find_all('span')
                 for span in spans:
                     text = span.get_text(strip=True)
+                    if text =="":
+                        print(self.salaries)
+                        return
                     if '₽' in text and "за\xa0месяц" in text and len(self.salaries) < self.mx:
                         cleaned = text.replace('\xa0', ' ').strip()
                         cleaned = cleaned.replace('\u202f', '')
