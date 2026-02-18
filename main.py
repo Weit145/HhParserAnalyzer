@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 # https://spb.hh.ru/search/vacancy?text=Кассир&ored_clusters=true&order_by=publication_time&page=0
 
 class Parser:
-    def __init__(self, select_work, mx:int = 20):
+    def __init__(self, select_work, mx:int = 10):
         self.mx = mx
         
         self.work = self.validate(select_work)
@@ -29,31 +29,35 @@ class Parser:
                 break
             try:
                 soup = BeautifulSoup(html, "html.parser")
-                self.find_price(soup)
+                self.find_vacancy(soup)
             except Exception:
                 break
             page += 1
         print(self.salaries)
     
-    def find_price(self, soup:BeautifulSoup):
-        vacancy_cards = soup.find_all("div", {"data-qa": "vacancy-serp__vacancy"})
+    def find_vacancy(self, soup:BeautifulSoup):
+        vacancy_cards = soup.find_all("div", {"data-qa": "vacancy-serp__vacancy"})  
         if not vacancy_cards:
             raise ValueError("No vacancies found")
         
         for card in vacancy_cards:
-                
-                if len(self.salaries) >= self.mx:
+            if len(self.salaries) >= self.mx:
                     break
+            self.find_price(card)
 
-                fn=card.find(class_="magritte-text___pbpft_4-4-4 magritte-text_style-primary___AQ7MW_4-4-4 magritte-text_typography-label-1-regular___pi3R-_4-4-4")
-                if fn is None:
-                    continue
-            
-                price = self.check_valute(fn.text)
-                if price is None:
-                    continue
+    def find_price(self, card):
+        salary_block = card.find_all("span", class_=re.compile(r"magritte-text"))
+        if salary_block is None:
+            return
+        
+        for block in salary_block:
+            if "₽" in block.text or "$" in block.text or "€" in block.text:
+                price=self.check_valute(block.text)
+                if price is not None:
+                    self.salaries.append(price)
+                return
 
-                self.salaries.append(price)
+    
 
     def check_valute(self, fn:str)->int | None:
         if "₽" in fn:
@@ -84,6 +88,8 @@ class Parser:
             select_work = select_work[1:]
         if select_work [-1] == " ":
             select_work = select_work[:-1]
+        if "+" in select_work:
+            select_work = select_work.replace("+", "%2B")
         return select_work.replace(" ", "+")
     
     def fetch(self) -> str | None:
