@@ -106,7 +106,8 @@ class Parser:
         
 def main():
     select_work = input()
-    parser = Parser(select_work)
+    mx=int(input())
+    parser = Parser(select_work,mx)
     print(parser.run())
     
 if __name__ == "__main__":
