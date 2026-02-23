@@ -1,0 +1,201 @@
+                                                                               name     salary  experience                                              company          region  responses
+                                             Java Team Lead (fintech, в г. Ташкент)     5000.0           6                              Саидов Алишер Ринатович          Москва        250
+                                                            Программист-электронщик   100000.0           1                                              INTERRA  Ростов-на-Дону         30
+                                                                          Tech Lead        NaN           3                                            Спортдата           Минск         10
+                             Руководитель группы разработки (iOS, Android, Windows)        NaN           3                                            Спортдата           Минск         13
+                                                                   Java-разработчик        NaN           6                                               Т-Банк         Воронеж          0
+                                                                     Java Developer        NaN           3 HALYK FINANCE, дочерняя организация АО Народный банк          Алматы         13
+                                                                   Java разработчик        NaN           3                           Слюсарь Михаил Анатольевич       Сыктывкар         17
+                                                                   Java-разработчик        NaN           1                                           UNITEL LLC         Ташкент          0
+                                                                   Java-разработчик        NaN           3                                            Emphasoft          Батуми         14
+                                                              Senior Java Developer        NaN           6                                               Лектон Санкт-Петербург        227
+                                                            Senior java разработчик   250000.0           6                                    Бизнес Технологии Санкт-Петербург        125
+                                                                     Team Lead Java        NaN           6                                                СИГМА Санкт-Петербург         93
+                                                                     Team Lead Java        NaN           6                                                СИГМА          Москва        179
+                                                                     Java Developer        NaN           1              Team.Inno / Фабрика инноваций и решений         Витебск         12
+                                                                   Java-разработчик        NaN           3   КБ Уральский банк реконструкции и развития (УБРиР)          Москва        423
+                                                            Java Developer (Middle)        NaN           1                                            Jana Post          Алматы        380
+                                                                   Java разработчик        NaN           3                                               Т-Банк           Томск          0
+                                                     Java/Kotlin Developer (Spring)     2200.0           3                                               ITACWT Санкт-Петербург        130
+                                                     Тестировщик-автоматизатор Java   205000.0           3                                     Amex Development          Москва        329
+                                                    Senior fullstack java developer   250000.0           6                                    Бизнес Технологии Санкт-Петербург        149
+                                                             Java, python developer        NaN           1                                            Клауд Ком          Москва        373
+                                                            Java Developer Middle++        NaN           3                                 СИСТЕМНЫЕ ТЕХНОЛОГИИ           Минск        406
+                                                 Java-разработчик (Middle / Senior)        NaN           3                                           Студия Т_Г Нижний Новгород        316
+                                                            Java Developer Junior++        NaN           1                                 СИСТЕМНЫЕ ТЕХНОЛОГИИ           Минск        492
+                                         Java разработчик (продукт «Единый клиент»)        NaN           3                                               HFLabs          Москва       2065
+                                                    Java Developer (Junior+/Middle)        NaN           1                                        Мобикон-Медиа           Минск        284
+                                                           Главный Java-разработчик        NaN           3                                            Aloqabank         Ташкент         12
+                                                             QA Fullstack (UI/Java)        NaN           3                                            Приорбанк           Минск        233
+                                           Fullstack Java разработчик (MES-система)        NaN           1                                 АНТ-Цифровые Сервисы Санкт-Петербург        312
+                                                     Java Spring Middle разработчик        NaN           1                                                 Шоро          Бишкек        225
+                                                      QA Automation Engineer (Java)        NaN           1                                             Andersen           Минск         12
+                                         Разработчик Senior Java / Kotlin Developer        NaN           3                                            1001 LABS          Москва        552
+                                                   Java/Kotlin-разработчик в Финтех        NaN           3                                               Яндекс Санкт-Петербург          0
+                                              Senior Java разработчик (Uzum Market)        NaN           6                                  «UZUM TECHNOLOGIES» Санкт-Петербург          0
+                                              Senior Java разработчик (Uzum Market)        NaN           6                                  «UZUM TECHNOLOGIES»         Тбилиси          0
+                                Tech Lead Backend (Java) - пишущий техлид, AI-first        NaN           3                                              Amagasa          Москва        581
+                                            Java разработчик в Платежные технологии        NaN           3                                               Т-Банк          Москва        801
+                                           Middle+ Java Engineer Keycloak (Medtech)   345000.0           3                                            evrone.ru          Москва        218
+                                              Senior Java разработчик (Uzum Market)        NaN           3                                  «UZUM TECHNOLOGIES»  Ростов-на-Дону         13
+                                                                   Java-разработчик        NaN           3                                   ТелеСистемы Сервис          Москва       1198
+                                                                   Java-разработчик        NaN           3                                   ТелеСистемы Сервис Санкт-Петербург        914
+                                                                   Java-разработчик        NaN           3                                   ТелеСистемы Сервис         Воронеж        806
+                                          Java Software Engineer (Internal Product)        NaN           3                                          Syberry CIS           Минск         12
+                                                                   Java-разработчик        NaN           3                                          MasterSCADA          Москва       1151
+                                  Java TeamLead / Engineering Manager (Uzum Market)        NaN           6                                  «UZUM TECHNOLOGIES»          Москва          0
+                    Инженер по автоматизированному тестированию (Fullstack QA Java)        NaN           3                                             Раппорто          Москва        377
+                                            Разработчик Java в проект на 1C:Element        NaN           1                                            Мираполис          Самара        931
+                                                                   Java-разработчик        NaN           6                                  IT Холдинг Kazdream          Астана          0
+                        Middle Backend Developer Java (ведущий инженер-программист)        NaN           3             Национальный центр электронных услуг,РУП           Минск        238
+                                                                   Java-разработчик        NaN           3                             Народный банк Казахстана          Алматы          0
+                                                                   Java-разработчик        NaN           1                                              Интабия     Новосибирск        418
+                                           Java разработчик/Java Developer (стажер)    67000.0           0                                                Aston          Москва        352
+                                           Java разработчик/Java Developer (стажер)    67000.0           0                                                Aston          Москва        352
+                                                         Android-разработчик (Java)        NaN           3                                 Системная Интеграция          Москва        273
+                                                              Senior Java Developer        NaN           6                                            Jana Post          Алматы        195
+                                                            System Architect (Java)        NaN           6                                              iFuture Санкт-Петербург        194
+                                                                    Java QA Инженер 17500000.0           1   «NATIONAL INNOVATIVE PAYMENT TECHNOLOGIES» (ATMOS)         Ташкент        166
+                                                              Middle Java Developer        NaN           3                                            Уайт Бёрд           Минск        149
+                                                          Java разработчик (ученик)    67000.0           0                                                Aston         Воронеж         12
+Tech Lead Java/ Senior / Руководитель разработки внутренних корпоративных продуктов        NaN           6                                        Платформа ОФД          Москва        381
+                                                          Java-разработчик (Senior)        NaN           3                                           Софттрэвэл          Москва       1015
+                                                            Junior Java-разработчик        NaN           1                                             Gridnine          Москва        850
+                                                   Java-разработчик (Middle/Senior)        NaN           1                                                ЛАНИТ          Москва        315
+                                                              Senior Java Developer        NaN           3                                            Клауд Ком          Москва        245
+                                                          Java-разработчик (Middle)        NaN           1 HALYK FINANCE, дочерняя организация АО Народный банк          Алматы          0
+                                                                   JAVA-разработчик   240000.0           3                                                ЛАНИТ          Москва        847
+                                                                   Java-разработчик        NaN           1                                               Т-Банк          Рязань          0
+                                                 Team lead группы разработки (Java)        NaN           6                            Colvir Software Solutions          Москва        261
+                                                           Младший Java-разработчик        NaN           1                                              Интабия     Новосибирск        537
+                                                Tech Lead Java (Аналитика и сервис)        NaN           3                                    М.Видео-Эльдорадо          Москва        484
+                                                    Senior Java Developer (Trading)        NaN           6                                            Уайт Бёрд           Минск         39
+                                                      Middle+/Senior Java Developer        NaN           3   «NATIONAL INNOVATIVE PAYMENT TECHNOLOGIES» (ATMOS)         Ташкент        273
+              Разработчик Java (Java spring boot, JavaSE, Hibernate), Middle/Senior        NaN           3                                      Networks Energy          Астана        311
+                                                  Java разработчик (Swing / JavaFX)        NaN           3                                            Axiom JDK Санкт-Петербург        324
+                                                        QA Automation Engineer Java        NaN           1                                                Aston          Москва        689
+                                       Инженер по автоматизации тестирования (Java)        NaN           1                          Азиатско-Тихоокеанский Банк          Москва        104
+                                                                     Java developer        NaN           1                                              ФоксТри           Минск        190
+                                                                   Java-разработчик   287400.0           6                                           Datanomica          Москва        771
+                                                        QA Automation Engineer Java        NaN           1                                        Перфоманс Лаб          Москва          0
+                                                       Java разработчик с матем. ВО        NaN           1                                 АНТ-Цифровые Сервисы Санкт-Петербург        402
+                                                              Junior Java Developer    85000.0           0                                                 Гуфо          Москва        788
+                                                              Senior Java Developer        NaN           3                       ИП ООО SIGMA SOFTWARE TASHKENT         Ташкент        410
+                             Java-разработчик / Бэкенд разработчик (Средний/Middle)   172500.0           3                                           СофтМоушен Санкт-Петербург        877
+                                           Java разработчик/Java Developer (стажер)    67000.0           0                                                Aston       Краснодар         12
+                                                            Java (Spring) Developer   200000.0           1                                              ИТигрис Санкт-Петербург       1014
+                                                            Java Developer (Middle)        NaN           1                                        Новаком Групп           Минск        379
+                                                      QA Automation Engineer (Java)        NaN           3                                 Spotware Systems Ltd            Кипр         78
+                                       Middle+/Senior Java Developer (офис, Бишкек)     3250.0           3                                        VELES.FINANCE          Бишкек         79
+                                    Руководитель разработки/Team lead (Java/Kotlin)        NaN           3                                           Лемана ПРО          Москва        149
+               Middle+ / Senior инженер автоматизированного тестирования (AQA Java)   160000.0           6                                               RedLab          Москва          0
+                                QA Engineer (JS, Java) (специалист по тестированию)        NaN           3                                          ИВЦ Минфина           Минск        339
+                                                             Backend Java developer        NaN           6                                              Аффимоб          Москва        575
+                                                                   Java-разработчик   471132.0           3                                      Физтех Дженезис          Москва        140
+                                                          Java разработчик (ученик)    67000.0           0                                                Aston          Москва         12
+                                                           Java backend разработчик        NaN           3            Микрофинансовая организация Шинхан Финанс          Алматы          0
+                                                               Java/Kotlin Engineer     2050.0           1                                           Софтнетикс           Минск        339
+                                                             Java-разработчик (НСУ)        NaN           3                                              Геоскан Санкт-Петербург        298
+                                                                   Java-разработчик        NaN           3                                            СберПраво          Москва         12
+                                                            Senior Java разработчик   300000.0           3                                          Про.Потолок          Москва          0
+                                                                   Java-разработчик        NaN           1                                        Смарт-Контакт            Тула         16
+                                                              Senior Java Developer        NaN           6                                  «UZUM TECHNOLOGIES»    Екатеринбург          0
+                                                                   Java-разработчик        NaN           1                                            ГК Орбита          Москва        127
+                                                            Senior Java разработчик   300000.0           3                                          Про.Потолок          Москва          0
+                                                                   Java-разработчик        NaN           1                                        Смарт-Контакт            Тула         16
+                                                              Senior Java Developer        NaN           6                                  «UZUM TECHNOLOGIES»    Екатеринбург          0
+                                                                   Java-разработчик        NaN           1                                            ГК Орбита          Москва        127
+                                                                     JAVA Developer        NaN           6                                    РАСЧЕТНЫЕ РЕШЕНИЯ          Москва          0
+                                                         Senior Java Developer, AWS     5500.0           6                                          COMTEK Inc.          Алматы        553
+                                                       Java Backend Developer (Mid)        NaN           3                                            Скандрайв          Москва       1133
+                                                      Senior Backend Java Developer   285000.0           6                                         Креатик Софт     Новосибирск        123
+                                                                   Java-разработчик        NaN           3      Национальный межбанковский процессинговый центр         Ташкент         12
+                                                   Middle / Senior Java-разработчик        NaN           3                                                 edna          Москва          0
+                                                      QA Automation Engineer (Java)        NaN           1                                             Andersen         Тбилиси         12
+                                                          Java Developer (Middle +)   900000.0           3                                   МФО Деньги говорят          Алматы        115
+                                               Инженер-программист (Java developer)     4000.0           3                                          ИВЦ Минфина           Минск        262
+                                                      QA Automation Engineer (Java)        NaN           3                                        Qulix Systems           Минск         47
+                                        QA - engineer Auto Java/Manual (Йошкар-Ола)   165000.0           3                                               МОНЕТА      Йошкар-Ола         90
+                                                 Тестировщик Java/AQA Java (стажер)        NaN           0                                                Aston Санкт-Петербург         12
+                                                               Java Senior\TeamLead        NaN           6                                                 СБЕР          Москва         12
+                                    Java бэкенд разработчик/ Java backend developer        NaN           3                                                 Марс          Москва          0
+                                      Java / Kotlin разработчик (Software Engineer)   450000.0           1                                         Консалт Плюс          Москва         61
+                                                              Senior Java Developer        NaN           3                                                 СБЕР          Москва         32
+                                                             Java Backend Developer        NaN           3                                   Бэнкс Софт Системс          Москва         17
+                                                                   Java-разработчик   170000.0           3                                           ИЦ АЙ-ТЕКО Санкт-Петербург          0
+                                                                   Java разработчик        NaN           3                                    М.Видео-Эльдорадо          Москва         19
+                                                          Java-разработчик (финтех)   245000.0           3                                            ГК Орбита          Москва         12
+                                             Программист Android-разработчик (Java)        NaN           1                                              Картпэй             Уфа        217
+                                                                          Lead Java        NaN           6                                              X5 Tech          Москва         13
+                                                                     Java Developer        NaN           3                                              Смартек            Тула          0
+                                                              Senior Java Developer        NaN           3                                    М.Видео-Эльдорадо          Москва         15
+                                           Java разработчик/Java Developer (стажер)    22500.0           0                                         Симплекс 2.0          Москва        102
+                                           Java Backend Developer (Uzbekistan only)     2150.0           3                 NASRIDDINOVA FARANGIZ SARDORJON QIZI         Ташкент        576
+                                                          Java разработчик (middle)        NaN           3                                                Цифра          Москва          0
+                                               Senior Automation QA Engineer (Java)        NaN           3                                            Unisender          Москва         80
+                                                          Java-разработчик (middle)   180000.0           3                                            ГК Орбита          Москва        182
+                                             QA Automation Engineer Java (AQA Java)        NaN           1                                           Ростелеком          Москва          0
+      QA Lead / Senior QA Engineer (Java, Performance, Healthcare/Insurance domain)        NaN           3              Team.Inno / Фабрика инноваций и решений           Минск          0
+                                                          Java разработчик (ученик)    67000.0           0                                                Aston       Челябинск         12
+                                                              Senior Java Developer        NaN           3              Team.Inno / Фабрика инноваций и решений         Витебск          0
+                                                                   Java программист        NaN           1                                             REALSOFT         Ташкент          0
+                                                    Junior Java-backend разработчик   128574.0           1                           Лавринец Яна Станиславовна          Москва        309
+                                                      QA Automation Engineer (Java)        NaN           1                                             Andersen          Алматы         12
+                                                          QA specialist (Auto Java)        NaN           3                                                 СБЕР          Москва         12
+                                                                   Java-разработчик   280000.0           3                                                Рефни          Москва        106
+                                                    Ведущий разработчик Kotlin/Java        NaN           3                                          БФТ-Холдинг          Москва          0
+                                                  Java-разработчик (Москва, гибрид)        NaN           3                              Bell Integrator Регионы          Москва        108
+                                                                     Java Developer        NaN           3                                         АКБ Агробанк         Ташкент         13
+                                                       Junior/Middle Java Developer        NaN           1              Team.Inno / Фабрика инноваций и решений         Витебск          0
+                                    Automation QA-Engineer Java/Python/C# (GameDev)        NaN           0                                           Gear Games Санкт-Петербург        193
+                                                         Java-разработчик (junior+)        NaN           0                                 Лайт Вел Организейшн           Минск         12
+                                                  Java разработчик / Java Developer   110000.0           1                           Кадровое агентство HireWay          Москва         18
+                         QA Fullstack (со специализацией на API-тестировании, Java)        NaN           3                                            Приорбанк           Минск        114
+                Инженер по автоматизированному тестированию Java (middle +, senior)        NaN           3                                                 edna          Москва          0
+                                                Senior Fullstack QA Engineer (Java)        NaN           3                                         СберЗдоровье          Москва         13
+                                Java-разработчик / Java engineer (Middle+ / Senior)        NaN           6                                                 Леон Санкт-Петербург         12
+                                                              Senior Java developer     6000.0           3                                              AdGuard          Москва        157
+                                                                  QA инженер (Java)        NaN           1  Центральный банк Российской Федерации (Банк России)          Казань         13
+                                                          Java-разработчик (Senior)        NaN           3                                     Maxim technology Санкт-Петербург         15
+                                                           Java developer (Middle+)        NaN           3                                     Инфосистемы Джет          Москва         18
+                                                           Backend Developer (Java)        NaN           3                                               RDP.RU          Москва        133
+                                                          Java разработчик (ученик)    67000.0           0                                                Aston            Омск         12
+                                                         SAP BTP CAP Java Developer        NaN           3                                               LeverX           Минск         12
+                       QA Engineer Automation (web: TS, Playwright or mobile: Java)        NaN           3                                           АЛЬФА-БАНК           Минск        753
+                                    Ведущий Java-разработчик, Инфраструктура данных        NaN           6                                                 Ozon          Москва        130
+                                                  Fullstack QA Engineer (Java / JS)        NaN           1                          Центр финансовых технологий     Новосибирск         13
+                                           Middle Java developer / Java-разработчик        NaN           3                               DIGITAL FUTURE SYSTEMS           Пермь         16
+                                                     Стажер Java/Kotlin разработчик        NaN           1                                              X5 Tech          Москва         15
+                                                    Junior Java Developer (Belarus)        NaN           0                                         GP Solutions           Минск         99
+                                                 Тестировщик Java/AQA Java (стажер)        NaN           0                                                Aston          Казань         12
+                                                                   Java-разработчик        NaN           3                                               Ediweb        Белгород         18
+                                 QA Engineer Java/Инженер-тестировщик Java (ученик)        NaN           0                                                Aston          Москва         12
+                                                Middle Java/Kotlin Developer (Офис)   200000.0           1                                         SpectrumData    Екатеринбург          0
+                                                   Java-разработчик (Middle/Senior)        NaN           3                                        ВИРТУ СИСТЕМС          Москва         12
+                                                                   Java-разработчик        NaN           1                                              hibirit         Воронеж        234
+                                                        Senior Java Developer (+TS)        NaN           3                                             DatsTeam          Москва         13
+                                                        QA Automation Engineer Java        NaN           1                                        Перфоманс Лаб          Москва         12
+                                                        Senior Automation QA (Java)        NaN           6                                     IDT Technologies           Минск         12
+                                                     Senior Java / Kotlin Developer        NaN           6                                      IT SCOUT(match)          Сербия         16
+                                                        Java-разработчик (антифрод)        NaN           3                              Лига Цифровой Экономики          Москва        276
+                                                  Java-разработчик (middle+/senior)        NaN           3                                            Notamedia          Москва         15
+                                           Педагог дополнительного образования Java    31500.0           1                                   ГБОУ ДО СО СОЦДЮТТ          Самара          0
+                                                                       QA Lead Java   329500.0           6                                            ГК Орбита          Москва         12
+                                                       Java Developer Middle/Senior        NaN           3                                         OPEN BANK AJ         Ташкент          0
+                                Backend Developer (Java/Kotlin) для криптоплатформы   300000.0           3                                               Wanted          Москва         17
+                                                              Senior Java Developer        NaN           3                                         Тайгер Трейд          Москва          0
+                                   Младший Java-разработчик (Junior Java Developer)    70000.0           0                       Панина Анастасия Александровна          Москва         17
+                                                            Разработчик Java Kotlin        NaN           3                               ДИКСИ, группа компаний          Москва         21
+                                                    Junior backend developer (Java)        NaN           1                                               RDP.RU          Москва         18
+                                                           Ведущий Java разработчик        NaN           3                                           Альфа-Банк          Москва         16
+                                                            Системный аналитик Java   200000.0           1                                            Снэп АйТи          Москва        142
+                                                    Senior Java-разработчик GigaIDE        NaN           3                                             SberTech          Москва         12
+                                                          Java-разработчик (стажер)    50000.0           1                                               SanaUp          Астана         13
+                                                              Senior Java Developer        NaN           6                           Казарьянц Артур Эдуардович          Москва        144
+                                                          Java разработчик (ученик)    67000.0           0                                                Aston Санкт-Петербург         12
+                                                              Разработчик ПО (Java)        NaN           3                                                БУЛАТ          Москва          0
+                                                             Backend Java Developer        NaN           1                                 Elite Business Group          Алматы          0
+                                    Java-разработчик (CRM / Цифровая трансформация)        NaN           1                                     Сбер Бизнес Софт          Москва         15
+                                           Java Backend Developer (Junior+/Middle-)   120000.0           1                                           ИЦ АЙ-ТЕКО          Москва          0
+                                                                   Java разработчик        NaN           3                                           Альфа-Банк          Москва        170
+                                                                   Java-разработчик        NaN           3                                          Bereke Bank          Алматы          0
