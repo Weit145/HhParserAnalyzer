@@ -1,10 +1,7 @@
-import re
 import requests
 from bs4 import BeautifulSoup
 import json
 import pandas as pd
-import time
-
 class Parser:
     def __init__(self, select_work, mx:int = 10):
         self.mx = mx
@@ -109,6 +106,7 @@ def main():
     mx =  int(input("Enter the maximum number of vacancies to fetch: "))
     parser = Parser(select_work, mx)
     results_df = parser.run()
+    print(results_df)
     
     output_file = "vacancies.txt"
     with open(output_file, "w", encoding="utf-8") as f:
@@ -117,4 +115,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
