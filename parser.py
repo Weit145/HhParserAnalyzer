@@ -102,7 +102,7 @@ class Parser:
             return None
 
     def write_csv (self,df):
-        output_file = "vacancies.csv"
+        output_file = f"{self.work}.csv"
         df.to_csv(output_file, index=False, sep=';', encoding='utf-8-sig')
 
 
