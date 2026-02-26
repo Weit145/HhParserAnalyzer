@@ -44,6 +44,8 @@ class Parser:
                     break
                 
                 salary = vacancy_json.get('compensation')
+                vl = salary.get('currencyCode')
+
                 salary_numeric = None
                 if salary:
                     salary_from = salary.get('from')
@@ -54,8 +56,7 @@ class Parser:
                         salary_numeric = salary_from
                     elif salary_to:
                         salary_numeric = salary_to
-
-
+                salary_numeric = self.valut(salary_numeric,vl)
                 experience_mapping = {
                     "noExperience": 0,
                     "between1And3": 1,
@@ -85,6 +86,20 @@ class Parser:
         df = pd.DataFrame(self.vacancies)
         self.write_csv(df)
         return df
+
+    def valut(self, salary,valut):
+        if valut =="RUR":
+            return salary
+        elif valut == "USD":
+            return salary * 76
+        elif valut == "EUR":
+            return salary * 90
+        elif valut == "KZT":
+            return salary * 0.15
+        elif valut == "UZS":
+            return salary * 0.00063
+        else:
+            return None
 
     def write_csv (self,df):
         output_file = "vacancies.csv"
