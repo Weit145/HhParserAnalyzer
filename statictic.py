@@ -29,7 +29,6 @@ class Statistic:
         df = self.to_numeric(df, ['salary', 'experience', 'responses'])
         df = self.remove_outliers_iqr(df, metric)
 
-
         skew = self.skewness(df, metric)
         kurt = self.kurtosis(df, metric)
         print(f"\nАсимметрия {metric}: {skew:.2f}")
@@ -43,7 +42,7 @@ class Statistic:
         self.plot_heatmap(corr, "correlation_heatmap.png")
         if scatter_x!="" and scatter_y!="" and scatter_hue!="":
             self.plot_scatter(df, scatter_x, scatter_y, scatter_hue, f"scatter_{scatter_x}_{scatter_y}.png")
-    
+
 
     def clean(self, metric: str) -> pd.DataFrame:
         df = self.original_df.copy()
@@ -78,7 +77,6 @@ class Statistic:
     def correlation_matrix(self, df: pd.DataFrame) -> pd.DataFrame:
         numeric = df.select_dtypes(include=[np.number]).columns
         return df[numeric].corr()
-
     
     def plot_hist(self, df: pd.DataFrame, col: str, filename: str = "hist.png"):
         plt.figure(figsize=(10,5))
