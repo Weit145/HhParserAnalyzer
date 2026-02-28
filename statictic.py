@@ -26,7 +26,7 @@ class Statistic:
     def run(self, metric: str, group_col: str = "", scatter_x: str = "", 
             scatter_y: str = "", scatter_hue: str = ""):
         df = self.clean(metric)
-        df = self.to_numeric(df, ['salary', 'experience', 'responses'])
+        df = self.to_numeric(df, [scatter_x, scatter_y, scatter_hue])
         df = self.remove_outliers_iqr(df, metric)
 
         skew = self.skewness(df, metric)
