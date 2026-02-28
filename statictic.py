@@ -51,9 +51,10 @@ class Statistic:
         return df
 
 
-    def to_numeric(self, df:pd.DataFrame, columns: list)->pd.DataFrame:
+    def to_numeric(self, df: pd.DataFrame, columns: list) -> pd.DataFrame:
         for col in columns:
-            df[col] = pd.to_numeric(df[col], errors='coerce')
+            if col and col in df.columns:
+                df[col] = pd.to_numeric(df[col], errors="coerce")
         return df
     
     def remove_outliers_iqr(self, df: pd.DataFrame, col: str) -> pd.DataFrame:

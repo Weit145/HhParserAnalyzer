@@ -18,13 +18,14 @@ def main():
 
     # parser = HHParserApi("Python")
     # df = parser.run()
+    # df.shape
     # parser.write_csv(df)
 
     df = pd.read_csv("Python.csv", sep=';', encoding='utf-8-sig')
     st = Statistic(df, img_dir="img")
     st()
     st.run(metric='salary', group_col='experience', scatter_x='salary', 
-        scatter_y='experience', scatter_hue='monthly_hours')
+        scatter_y='monthly_hours', scatter_hue='experience')
 
 
 
