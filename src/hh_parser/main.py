@@ -1,7 +1,7 @@
 import pandas as pd
-from statictic import Statistic
-from parser import Parser
-from hh_api import HHParserApi
+from .stats import Statistic
+from .parsers.html_parser import Parser
+from .parsers.api_parser import HHParserApi
 
 
 def main():
@@ -21,8 +21,8 @@ def main():
     # df.shape
     # parser.write_csv(df)
 
-    df = pd.read_csv("Python.csv", sep=';', encoding='utf-8-sig')
-    st = Statistic(df, img_dir="img")
+    df = pd.read_csv("data/api/Python.csv", sep=';', encoding='utf-8-sig')
+    st = Statistic(df, img_dir="img/api")
     st()
     st.run(metric='salary', group_col='experience', scatter_x='salary', 
         scatter_y='monthly_hours', scatter_hue='experience')

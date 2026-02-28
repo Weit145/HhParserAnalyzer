@@ -2,7 +2,7 @@ import requests
 import time
 import re
 from statistics import mean
-from config import settings
+from ..config import settings
 import pandas as pd
 
 

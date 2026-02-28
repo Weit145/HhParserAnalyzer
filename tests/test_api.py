@@ -1,3 +1,8 @@
+import requests
+import re
+from statistics import mean
+from src.hh_parser.config import settings
+
 # def test():
 #     url = "https://api.hh.ru/vacancies"
 #     headers = {
