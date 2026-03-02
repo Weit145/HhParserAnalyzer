@@ -2,6 +2,8 @@ import requests
 import time
 import re
 from statistics import mean
+
+from requests.models import stream_decode_response_unicode
 from ..config import settings
 import pandas as pd
 
@@ -9,10 +11,10 @@ import pandas as pd
 
 class HHParserApi:
     
-    def __init__(self, vacancia:str) -> None:
+    def __init__(self, vacancia:str, path:str = "") -> None:
         self.vacancia = vacancia
 
-        
+        self.path = path    
         self.session = requests.Session()
         self.url = "https://api.hh.ru/vacancies"
         self.headers = {
@@ -239,7 +241,7 @@ class HHParserApi:
         self.per_page = data.get("per_page", 0)
 
     def write_csv (self,df):
-        output_file = f"{self.vacancia}.csv"
+        output_file = f"{self.path}{self.vacancia}.csv"
         df.to_csv(output_file, index=False, sep=';', encoding='utf-8-sig')
 
 
