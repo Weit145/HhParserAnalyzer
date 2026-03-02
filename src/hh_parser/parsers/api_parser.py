@@ -1,9 +1,7 @@
 import requests
 import time
 import re
-from statistics import mean
 
-from requests.models import stream_decode_response_unicode
 from ..config import settings
 import pandas as pd
 
@@ -47,27 +45,23 @@ class HHParserApi:
     def found_items(self):
         for i, id_ in enumerate(self.st, 1):
             url = f"{self.url}/{id_}"
-
-            for attempt in range(5):
+            for _ in range(5):
                 try:
                     response = self.session.get(
                         url,
                         headers=self.headers,
-                        timeout=5
+                        timeout=1
                     )
-
                     if response.status_code == 200:
                         data = response.json()
-
                         row = {
                             "name": data.get("name"),
                             "area": self.area(data),
                             "employer": self.employer(data),
                             "salary": self.salary(data),
                             "experience": self.experience(data),
-                            "monthly_hours": self.monthly_hours(data),
+                            "monthly_hours": self.hours_in_month(data),
                         }
-
                         self.vacancies.append(row)
                         break
 
@@ -76,15 +70,13 @@ class HHParserApi:
 
                 except requests.exceptions.RequestException:
                     time.sleep(1)
-
             if i % 50 == 0:
                 print(f"processed {i}/{len(self.st)}")
-
-            time.sleep(0.05)
+            
 
     def experience(self,data):
         experience = data.get("experience", {})
-        experience_id = experience.get("id")
+        experience_id = experience.get("id",None)
         experience_mapping = {
             "noExperience": 0,
             "between1And3": 1,
@@ -93,75 +85,46 @@ class HHParserApi:
         }
         return experience_mapping.get(experience_id, None)
     
-    def monthly_hours(self, data):
+    def hours_in_month(self, data):
         working_hours = data.get("working_hours", [])
         schedule = data.get("work_schedule_by_days", [])
-
-        daily_hours = self.parse_daily_hours(working_hours)
-
-        if daily_hours is not None:
-            days = self.days_from_schedule(schedule)
-            if days is None:
-                days = 22
-            return daily_hours * days
-
-        days = self.days_from_schedule(schedule)
-        if days is not None:
-            return 8 * days
-
+        mn_hour, mx_hour = self.hours(working_hours)
+        mn_day, mx_day = self.days(schedule)
+        if mn_hour and mx_hour and mn_day and mx_day:
+            return (mn_hour*mx_day+mx_hour*mn_day)/2
         return None
-    
-    def days_from_schedule(self, schedule_list):
-        if not schedule_list:
-            return None
 
-        mapping = {
-            "FIVE_ON_TWO_OFF": 22,
-            "SIX_ON_ONE_OFF": 26,
-            "TWO_ON_TWO_OFF": 15,
-            "THREE_ON_THREE_OFF": 15,
-            "FOUR_ON_FOUR_OFF": 15,
-            "FOUR_ON_TWO_OFF": 20,
-            "THREE_ON_TWO_OFF": 20,
-        }
-
-        days = []
-
-        for item in schedule_list:
-            sid = item.get("id")
-            if sid in mapping:
-                days.append(mapping[sid])
-
-        if not days:
-            return None
-
-        return mean(days)
-
-    def monthly_hours_from_daily(self, daily_hours, work_days_per_month=22):
-        if daily_hours is None:
-            return None
-        return daily_hours * work_days_per_month
-
-
-    def parse_daily_hours(self, working_hours_list):
-        if not working_hours_list:
-            return None
-        
-        hours = []
-        
-        for item in working_hours_list:
+    def hours(self, data):
+        mx=0
+        mn=25
+        for item in data:
             name = item.get("name", "")
             match = re.search(r"\d+", name)
             if match:
-                hours.append(int(match.group()))
-        
-        if not hours:
-            return None
-        
-        if len(hours) == 1:
-            return hours[0]
-        
-        return mean(hours)
+                res = int(match.group())
+                mx=max(mx,res)
+                mn=min(mn,res)
+        if mx!=0 and mn!=25:
+            return mn, mx
+        return None, None
+    
+    def days(self,data):
+        mx=0
+        mn=40
+        for item in data:
+            name = item.get("name","")
+            match = re.search(r"(\d+)/(\d+)", name)
+            if match:
+                first = int(match.group(1))
+                second = int(match.group(2))
+                res = int(first/(first+second)*30)
+                mx=max(mx,res)
+                mn=min(mn,res)
+        if mx!=0 and mn!=40:
+            return mn, mx
+        return None, None
+
+
         
     def employer(self, data):
         employer = data.get("employer",{})
