@@ -18,13 +18,13 @@ def main():
     #     scatter_y='responses', scatter_hue='experience')
 
 
-    # parser = HHParserApi("Python","data/api/test/")
-    # df = parser.run()
-    # df.shape
-    # parser.write_csv(df)
+    parser = HHParserApi("Юрист","data/api/")
+    df = parser.run()
+    df.shape
+    parser.write_csv(df)
 
-    df = pd.read_csv("data/api/test/Python.csv", sep=';', encoding='utf-8-sig')
-    st = Statistic(df, img_dir="img/api/test")
+    df = pd.read_csv("data/api/Юрист.csv", sep=';', encoding='utf-8-sig')
+    st = Statistic(df, img_dir="img/api/Юрист")
     st()
     st.run(metric='salary', group_col='experience', scatter_x='salary', 
         scatter_y='monthly_hours', scatter_hue='experience')
