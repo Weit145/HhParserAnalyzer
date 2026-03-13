@@ -19,22 +19,22 @@
 ### Распределение заработной платы
 Гистограмма показывает, что большинство предложений по зарплате сгруппировано в левой части графика, с длинным "хвостом" в сторону высоких зарплат.
 
-![Гистограмма зарплат](img/api/salary_hist.png)
+![Гистограмма зарплат](img/api/Python/salary_salary_hist.png)
 
 ### Зависимость зарплаты от опыта
 Ящик с усами демонстрирует, как меняется уровень и разброс зарплат с увеличением требуемого опыта.
 
-![Распределение зарплат по опыту](img/api/salary_box_by_experience.png)
+![Распределение зарплат по опыту](img/api/Python/salary_experience_salary_box_by_experience.png)
 
 ### Корреляционная матрица
 Тепловая карта показывает силу связи между числовыми параметрами. Зеленый цвет означает положительную корреляцию, красный — отрицательную.
 
-![Корреляционная матрица](img/api/correlation_heatmap.png)
+![Корреляционная матрица](img/api/Python/correlation_heatmap.png)
 
 ### Связь между зарплатой и часами работы
 Диаграмма рассеяния показывает зависимость между месячным окладом и количеством рабочих часов.
 
-![Зарплата vs Часы работы](img/api/scatter_salary_monthly_hours.png)
+![Зарплата vs Часы работы](img/api/Python/scatter_monthly_hours_vs_salary.png)
 
 ## Структура проекта
 
@@ -42,20 +42,34 @@
 
 ```
 .
+├── .github/           # CI/CD
+│   └── workflows/
+│       └── python-app.yml
 ├── data/              # Папка для хранения данных (CSV файлы)
+│   ├── api/
+│   └── parser/
 ├── img/               # Папка для сохранения сгенерированных изображений
+│   ├── api/
+│   └── parser/
 ├── src/
-│   └── hh_parser/
-│       ├── __init__.py
-│       ├── main.py        # Главный файл для запуска анализа
-│       ├── config.py      # Конфигурация (токены, ключи API)
-│       ├── stats.py       # Модуль для статистики и визуализации
-│       └── parsers/
-│           ├── __init__.py
-│           ├── api_parser.py  # Парсер, использующий API hh.ru
-│           └── html_parser.py # Парсер, использующий HTML-разметку
-├── tests/             # Папка для тестов
+│   ├── hh_parser/
+│   │   ├── parsers/
+│   │   │   ├── api_parser.py
+│   │   │   └── html_parser.py
+│   │   ├── config.py
+│   │   └── __init__.py
+│   ├── stats/
+│   │   ├── analyzer.py
+│   │   ├── cleaner.py
+│   │   ├── statistic.py
+│   │   ├── visualizer.py
+│   │   └── __init__.py
+│   └── main.py        # Главный файл для запуска анализа
+├── test/
+│   └── stats/
+│       └── test_analyzer.py
 ├── .gitignore
+├── Makefile
 ├── poetry.lock
 ├── pyproject.toml     # Файл с зависимостями для Poetry
 └── README.md
@@ -90,35 +104,53 @@
 
 ### 1. Сбор данных (Парсинг)
 
-Вы можете использовать один из двух парсеров для сбора данных.
+Вы можете использовать один из двух парсеров для сбора данных. Отредактируйте файл `src/main.py`, чтобы выбрать нужный парсер и запрос.
 
 **HTML-парсер:**
-Чтобы собрать данные, раскомментируйте и измените соответствующие строки в `src/hh_parser/main.py`:
 ```python
-# from .parsers.html_parser import Parser
-# parser = Parser("Python", mx=3000) # Замените "Python" на нужный запрос
-# df = parser.run()
+from src.hh_parser.parsers.html_parser import Parser
+parser = Parser("Python", mx=3000) # Замените "Python" на нужный запрос
+df = parser.run()
 ```
 Результат будет сохранен в файл, например, `Python.csv`.
 
 **API-парсер:**
-Для использования API-парсера раскомментируйте следующие строки в `src/hh_parser/main.py`:
 ```python
-# from .parsers.api_parser import HHParserApi
-# parser = HHParserApi("Python") # Замените "Python" на нужный запрос
-# df = parser.run()
+from src.hh_parser.parsers.api_parser import HHParserApi
+parser = HHParserApi("Python", path="data/api/") # Замените "Python" на нужный запрос
+df = parser.run()
 ```
+Результат будет сохранен в `data/api/Python.csv`.
 
 ### 2. Анализ и визуализация
 
-Для запуска анализа данных, которые уже находятся в одном из `.csv` файлов, укажите имя файла в `src/hh_parser/main.py`:
+Для запуска анализа данных, которые уже находятся в одном из `.csv` файлов, укажите имя файла в `src/main.py`. Класс `Statistic` из модуля `src.stats.statistic` принимает на вход DataFrame и путь для сохранения изображений.
+
 ```python
+import pandas as pd
+from src.stats.statistic import Statistic
+
 df = pd.read_csv("data/api/Python.csv", sep=';', encoding='utf-8-sig')
+st = Statistic(df, img_dir="img/api/Python")
+st() # Вывод описательной статистики
+st.run(
+    metric='salary', 
+    group_col='experience', 
+    scatter_x='salary', 
+    scatter_y='monthly_hours', 
+    scatter_hue='experience', 
+    row_var='area', 
+    col_var='experience'
+)
 ```
 
 Запустите главный модуль из корня проекта:
 ```bash
-poetry run python -m src.hh_parser.main
+poetry run python -m src.main
 ```
 
 Скрипт выведет в консоль основную информацию о датасете, а в папке `img/` будут сохранены обновленные графики.
+
+## CI/CD
+
+В проекте настроен CI/CD с помощью GitHub Actions. Рабочий процесс, описанный в файле `.github/workflows/python-app.yml`, автоматически запускает тесты (`pytest`) при каждом push или pull request в ветку `main`. Это гарантирует, что все изменения проходят проверку и не нарушают работоспособность проекта.
