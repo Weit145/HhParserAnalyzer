@@ -1,1 +1,1 @@
-poetry run python -m src.hh_parser.main 
+poetry run python -m src.main  

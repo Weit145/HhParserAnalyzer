@@ -1,9 +1,7 @@
 import pandas as pd
-import test
-from .stats import Statistic
-from .parsers.html_parser import Parser
-from .parsers.api_parser import HHParserApi
-from tests.test_api import test
+from .stats.statistic import Statistic
+from .hh_parser.parsers.html_parser import Parser
+from .hh_parser.parsers.api_parser import HHParserApi
 
 
 def main():
@@ -18,18 +16,16 @@ def main():
     #     scatter_y='responses', scatter_hue='experience')
 
 
-    parser = HHParserApi("1с","data/api/")
-    df = parser.run()
-    df.shape
-    parser.write_csv(df)
-
-    df = pd.read_csv("data/api/1с.csv", sep=';', encoding='utf-8-sig')
-    st = Statistic(df, img_dir="img/api/1с")
+    # parser = HHParserApi("1с","data/api/")
+    # df = parser.run()
+    # df.shape
+    # parser.write_csv(df)
+    
+    df = pd.read_csv("data/api/Python.csv", sep=';', encoding='utf-8-sig')
+    st = Statistic(df, img_dir="img/api/Python")
     st()
     st.run(metric='salary', group_col='experience', scatter_x='salary', 
-        scatter_y='monthly_hours', scatter_hue='experience')
-
-    # test()
+        scatter_y='monthly_hours', scatter_hue='experience', row_var='area', col_var='experience')
 
 
 if __name__ == "__main__":
