@@ -7,7 +7,6 @@ from src.stats.analyzer import StatisticAnalyzer
 
 class TestStatisticAnalyzer:
         
-    
     @pytest.fixture
     def sample_df(self):
         np.random.seed(42)
