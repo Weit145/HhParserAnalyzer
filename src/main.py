@@ -23,9 +23,14 @@ def main():
     
     df = pd.read_csv("data/api/Python.csv", sep=';', encoding='utf-8-sig')
     st = Statistic(df, img_dir="img/api/Python")
-    st()
-    st.run(metric='salary', group_col='experience', scatter_x='salary', 
-        scatter_y='monthly_hours', scatter_hue='experience', row_var='area', col_var='experience')
+    st.zad_1()
+    st.zad_2()
+    st.zad_3()
+    st.zad_4()
+    st.zad_5()
+    st.zad_6()
+    # st.run(metric='salary', group_col='experience', scatter_x='salary', 
+    #     scatter_y='monthly_hours', scatter_hue='experience', row_var='area', col_var='experience')
 
 
 if __name__ == "__main__":
