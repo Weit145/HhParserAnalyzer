@@ -3,7 +3,7 @@ from .stats.statistic import Statistic
 from .hh_parser.parsers.html_parser import Parser
 from .hh_parser.parsers.api_parser import HHParserApi
 from .stats.gipotez import Gipotez
-
+from .stats.anova_lab5 import AnovaLab5
 def main():
     # parser = Parser("Python", mx=3000)
     # df = parser.run()
@@ -30,13 +30,16 @@ def main():
     # st.zad_5()
     # st.zad_6()
 
-    st = Gipotez(df, img_dir="img/api/zad")
-    st.zad_1()
-    st.zad_2()
-    st.zad_3()
-    st.zad_4()
-    st.zad_5()
-    st.zad_6()
+    # st = Gipotez(df, img_dir="img/api/zad")
+    # st.zad_1()
+    # st.zad_2()
+    # st.zad_3()
+    # st.zad_4()
+    # st.zad_5()
+    # st.zad_6()
+    
+    st = AnovaLab5(df)
+    st.run_all()
 
     # st.run(metric='salary', group_col='experience', scatter_x='salary', 
     #     scatter_y='monthly_hours', scatter_hue='experience', row_var='area', col_var='experience')
