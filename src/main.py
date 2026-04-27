@@ -15,7 +15,6 @@ def main():
     # st.run(metric='salary', group_col='experience', scatter_x='salary', 
     #     scatter_y='responses', scatter_hue='experience')
 
-
     # parser = HHParserApi("1с","data/api/")
     # df = parser.run()
     # df.shape
